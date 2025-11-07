@@ -79,7 +79,7 @@ PIESN
 ├── ...
 ```
 ## Pretraining Weights
-* **Download:** Download pre-trained weights from [Rein](https://github.com/w1oves/Rein) for testing. Place them in the project directory without changing the file name. Or The pretrained model and checkpoints can be downloaded here [Google Drive](https://drive.google.com/drive/folders/1KBLQ7nbOekcUdbTT-w-RRnwHuHxNJmoY?usp=drive_link).
+* **Download:** Download pre-trained weights from [Rein](https://github.com/w1oves/Rein) for testing. Place them in the project directory without changing the file name. Or the pretrained model and checkpoints can be downloaded here [Google Drive](https://drive.google.com/drive/folders/1KBLQ7nbOekcUdbTT-w-RRnwHuHxNJmoY?usp=drive_link).
 * **Convert:** Convert pre-trained weights for training or evaluation.
   ```bash
   python tools/convert_models/convert_dinov2.py checkpoints/dinov2_vitl14_pretrain.pth checkpoints/dinov2_converted.pth
@@ -88,10 +88,9 @@ PIESN
   ```bash
   python tools/convert_models/convert_dinov2.py checkpoints/dinov2_vitl14_pretrain.pth checkpoints/dinov2_converted_1024x1024.pth --height 1024 --width 1024
   ```
-
-The training and testing commands can be found in [Rein](https://github.com/w1oves/Rein).
   
 ## Evaluation (refer to Rein)
+The training and testing commands can be found in [Rein](https://github.com/w1oves/Rein).
   Run the evaluation:
   ```
   python tools/test.py configs/dinov2/rein_dinov2_mask2former_512x512_bs1x4.py checkpoints/dinov2_rein_and_head.pth --backbone dinov2_converted.pth
