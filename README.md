@@ -6,8 +6,8 @@ There is the code of the paper "Prototype-Guided Domain-Invariant Enhancement an
 The environmental setting can be followed by [Rein](https://github.com/w1oves/Rein).
 To set up your environment, execute the following commands:
 ```bash
-conda create -n CDG -y
-conda activate CDG
+conda create -n PIESN -y
+conda activate PIESN
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia -y
 pip install -U openmim
 mim install mmengine
@@ -30,7 +30,7 @@ The Preparation is similar as [Rein](https://github.com/w1oves/Rein).
 
 Prepare datasets with these commands:
 ```shell
-cd CDG
+cd PIESN
 mkdir data
 # Convert data for validation if preparing for the first time
 python tools/convert_datasets/gta.py data/gta # Source domain
@@ -44,7 +44,7 @@ python tools/convert_datasets/mapillary_resize.py data/mapillary/validation/imag
 The final folder structure should look like this:
 
 ```
-CDG
+PIESN
 ├── ...
 ├── checkpoints
 │   ├── dinov2_vitl14_pretrain.pth
